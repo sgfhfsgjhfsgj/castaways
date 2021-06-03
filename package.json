@@ -1,0 +1,20 @@
+{
+  "name": "castaway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "latest",
+    "@discordjs/opus": "latest",
+    "discord-player": "latest",
+    "discord.js": "latest",
+    "enmap": "latest",
+    "express": "latest",
+    "ffmpeg-static": "latest"
+  }
+}

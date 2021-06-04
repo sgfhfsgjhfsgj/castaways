@@ -24,15 +24,15 @@ app.listen(port, () => console.log(`[BPING] Listening at http://localhost:${port
 
 //=============COMMAND HANDLER=============\\
 
-fs.readdir("./commands/NormalCMDS", (err, files) => {
+fs.readdir("./commands/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
     // Load the command file itself
-    let props = require(`./commands/NormalCMDS/${file}`);
+    let props = require(`./commands/${file}`);
     // Get just the command name from the file name
     let commandName = file.split(".")[0];
-    console.log(`%c[Normal] Successfully loaded: ${commandName}`, Style.success);
+    console.log(`Successfully loaded: ${commandName}`);
     // Here we simply store the whole thing in the command Enmap. We're not running it right now.
     client.commands.set(commandName, props);
   });
